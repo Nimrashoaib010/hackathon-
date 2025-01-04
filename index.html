@@ -7,6 +7,7 @@
   <title>Navbar Design</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <!-- navbar -->
   <nav class="navbar">
@@ -49,8 +50,8 @@
       <img src="Images/image1.png" alt="Hero Section Image">
     </div>
   </section>
- 
-  
+
+
   <!-- <section class="second-section">
     <div class="header2">
       <div class="container">
@@ -84,8 +85,37 @@
     </div>
   </section>  -->
 
+  <!-- <section class="benefits">J
+      <h1 class="title">Benefits:</h1>
+      <div class="content">
+        <p><strong>CDS22-formula supports the dietary management of intestinal dysbiosis, contributing to well-being in
+            cases of intestinal disorders connected to irritable bowel syndrome, ulcerative colitis, and
+            paucities.</strong></p>
 
-  <!-- 3rd section -->
+        <h3>Control of intestinal dysbiosis:</h3>
+        <p>Intestinal dysbiosis is a condition where the natural balance of microorganisms in the intestine is altered,
+          causing various gastrointestinal disorders...</p>
+
+        <h3>Immediate and prolonged restoration of intestinal flora:</h3>
+        <p>CDS22-formula is ideal for both acute and chronic episodes of intestinal dysbiosis...</p>
+
+        <h3>Variety of Dosages:</h3>
+        <p>Available in different formats and dosages to support intestinal health...</p>
+
+        <h3>Original Formulation:</h3>
+        <p>CDS22-formula is the original FormulazionDe Simone...</p>
+
+        <h3>Guaranteed Safety:</h3>
+        <p>Every dose has been tested to ensure maximum efficacy and safety...</p>
+
+        <h3>Affordability:</h3>
+        <p>CDS22-formula offers superior value compared to probiotics...</p>
+      </div>
+    </section> -->
+
+
+
+  <!-- 4rth section -->
   <section class="worker-section">
     <div class="worker-content">
       <h1 class="worker-title">Why Does It <span class="work">Work?</span></h1>
@@ -112,7 +142,7 @@
     </div>
   </section>
 
-  <!-- 4rth section -->
+  <!-- 5th section -->
   <section class="formulation-section">
     <div class="formulation-conetent">
       <h1 class="formulation-title">De<span style="color:#ff3399"> Simone </span><span
@@ -144,7 +174,7 @@
         safety of the commercially distributed probiotic product.</p>
   </section>
 
-  <!-- 5th section -->
+  <!-- 6th section -->
 
   <section class="de-simone-section">
     <div class="de-simone-section-content">
@@ -224,86 +254,86 @@
       style="background-color: #0096FF; height: 200px; border-top-left-radius: 50px;border-top-right-radius: 50px;position: relative;
       margin-bottom: 50px;"> -->
 
-      <div class="contact">
-        <div class="form">
+    <div class="contact">
+      <div class="form">
 
-          <form id="contactForm">
-            <div class="radio">
-              <label>
-                <input type="radio" name="contact" value="hi" checked> Say Hi
-              </label>
-              <label>
-                <input type="radio" name="contact" value="quote"> Get a Quote
-              </label>
-            </div>
-            <div class="form-class">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Name" required>
-            </div>
-            <div class="form-class">
-              <label for="email">Email*</label>
-              <input type="email" id="email" name="email" placeholder="Email" required>
-            </div>
-            <div class="form-class">
-              <label for="message">Message*</label>
-              <textarea id="message" name="message" placeholder="Message" required></textarea>
-            </div>
+        <form id="contactForm">
+          <div class="radio">
+            <label>
+              <input type="radio" name="contact" value="hi" checked> Say Hi
+            </label>
+            <label>
+              <input type="radio" name="contact" value="quote"> Get a Quote
+            </label>
+          </div>
+          <div class="form-class">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Name" required>
+          </div>
+          <div class="form-class">
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+          </div>
+          <div class="form-class">
+            <label for="message">Message*</label>
+            <textarea id="message" name="message" placeholder="Message" required></textarea>
+          </div>
 
-            <button type="submit" class="submit-btn">Send Message</button>
-          </form>
-          <div>
-            <div class="hero-image">
-              <div class="contact-heading">
-                <h1>CDS22<span>-formula</span></h1>
-              </div>
-              <img src="Images/image1.png" alt="Hero Section Image">
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+        <div>
+          <div class="hero-image">
+            <div class="contact-heading">
+              <h1>CDS22<span>-formula</span></h1>
             </div>
+            <img src="Images/image1.png" alt="Hero Section Image">
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
-  import {getDatabase,ref,push} from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+    import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyBFzVYXSBbptdcnW9AraK8hGSv137Db4Oo",
-    authDomain: "hackathon-2601a.firebaseapp.com",
-    databaseURL: "https://hackathon-2601a-default-rtdb.firebaseio.com",
-    projectId: "hackathon-2601a",
-    storageBucket: "hackathon-2601a.firebasestorage.app",
-    messagingSenderId: "191726848859",
-    appId: "1:191726848859:web:f67171571f67fa3aa3687e"
-  };
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBFzVYXSBbptdcnW9AraK8hGSv137Db4Oo",
+      authDomain: "hackathon-2601a.firebaseapp.com",
+      databaseURL: "https://hackathon-2601a-default-rtdb.firebaseio.com",
+      projectId: "hackathon-2601a",
+      storageBucket: "hackathon-2601a.firebasestorage.app",
+      messagingSenderId: "191726848859",
+      appId: "1:191726848859:web:f67171571f67fa3aa3687e"
+    };
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const database = getDatabase(app);
-  const contactForm = document.getElementById("contactForm");
-  contactForm.addEventListener('submit',(e)=>{
-    e.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    push(ref(database, 'contacts'),{
-      name: name,
-      email: email,
-      message: message,
-    }).then(()=>{
-      alert('Message Successfully submit!');
-      contactForm.reset()
-    }).catch((error)=>{
-      console.error('you have ',error)
-    })
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const contactForm = document.getElementById("contactForm");
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      push(ref(database, 'contacts'), {
+        name: name,
+        email: email,
+        message: message,
+      }).then(() => {
+        alert('Message Successfully submit!');
+        contactForm.reset()
+      }).catch((error) => {
+        console.error('you have ', error)
+      })
 
-  });
+    });
 
-</script>
+  </script>
 
 </body>
 
