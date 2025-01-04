@@ -1,137 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Navbar Design</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<script type="module">
-  // Import the functions you need from the SDKs
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
-  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyDKoE2OAjPWAhukvSMftgi-sycRwXI6WtM",
-    authDomain: "hackathon-35798.firebaseapp.com",
-    projectId: "hackathon-35798",
-    storageBucket: "hackathon-35798.firebasestorage.app",
-    messagingSenderId: "56491087163",
-    appId: "1:56491087163:web:aa6d85ef79510e45bb931e",
-    measurementId: "G-L1JYGKP1CN"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-  // Function to handle form submission
-  async function handleSubmit(event) {
-    event.preventDefault(); // Prevent default form submission
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
-    const contactType = document.querySelector('input[name="contact"]:checked').value;
-
-    try {
-      // Add a new document to the "contacts" collection
-      await addDoc(collection(db, "contacts"), {
-        name,
-        email,
-        message,
-        contactType,
-        createdAt: new Date().toISOString(),
-      });
-      alert("Data saved successfully!");
-      document.getElementById("contactForm").reset(); // Reset form
-    } catch (error) {
-      console.error("Error saving data: ", error);
-      alert("Failed to save data.");
-    }
-  }
-
-  // Attach event listener to the form
-  document.getElementById("contactForm").addEventListener("submit", handleSubmit);
-</script>
-
 <body>
+  <!-- navbar -->
   <nav class="navbar">
-
     <ul class="nav-links">
       <li><a href="#">Home</a></li>
       <li><a href="#">Health</a></li>
       <li><a href="#">Locations</a></li>
       <li><a href="#">Shop</a></li>
       <li><a href="#">
-        <div class="logo">
-            <span class="logo-text-bold">CDS</span><span class="logo-text-highlight">22</span>-<span class="logo-text-italic">formula</span>
+          <div class="logo">
+            <img src="Images/logo.png" alt="logo">
           </div>
       </li>
       <li><a href="#">Become A Retailer</a></li>
       <li><a href="#">Contact Us</a></li>
       <li><a href="#">Recipe</a></li>
       <li>
-         <div class="cart-icon">
-            <div class="cart">🛒</div>
-      <span class="cart-count">0</span>
-    </div>
+        <div class="cart-icon">
+          <div class="cart">🛒</div>
+          <span class="cart-count">0</span>
+        </div>
       </li>
     </ul>
-   
+
   </nav>
 
-  
+  <!-- 2nd section -->
   <section class="hero">
     <div class="hero-content">
       <h1 class="heading">The <span class="dark-blue">De Simone</span></br>
-        <span class="dark-blue">Formulation</span> unique</br> and certified by <span class="inventor">the <br>Inventor</span></h1>
+        <span class="dark-blue">Formulation</span> unique</br> and certified by <span class="inventor">the
+          <br>Inventor</span>
+      </h1>
       <p class="hero-description">
         The De Simone Formulation unique and certified
         by the Inventor
       </p>
     </div>
     <div class="hero-image">
-      <img src="Images/image 1.png" alt="Hero Section Image">
+      <img src="Images/image1.png" alt="Hero Section Image">
     </div>
   </section>
-
-  <!-- <section>
-  <div class="header2">
-    <div class="container">
-      <div class="doctor">
-        <img src="images/professor_desimone-1.png" alt="Doctor">
-      </div>
-      <div class="info">
-        <h1>Science Speaks <span>For</span> <span class="highlight">Itself</span></h1>
-        <p>The De Simone Formulation contained in CDS22-formula is the only probiotic formulation recommended and
-          recognized by name in the American College of Gastroenterology AGA guidelines for the management of
-          pouchitis
-          and other pouch-related disorders (Olleik et al., Gastroenterology, Vol. 164, No. 6, 2023).</p>
-        <p>The European Crohn’s and Colitis Organization (ECCO) has included the De Simone Formulation in its
-          guidelines
-          for the management of Inflammatory Bowel Diseases (IBD) (ECCO, ECCO News, 2023). CDS22-formula is highly
-          effective in the dietary management of various gastrointestinal conditions. The extensive scientific
-          evidence,
-          comprising over 200 peer-reviewed articles and more than 80 controlled clinical studies, ensures that the
-          benefits observed in clinical trials are replicable in everyday use.</p>
-        <div class="stats">
-          <div class="stat-box"><span>20+</span><br>Years of Research</div>
-          <div class="stat-box"><span>8</span><br>Selected Strains</div>
-          <div class="stat-box"><span>90</span><br>Up to 90 Billion Per Sachet</div>
-          <div class="stat-box"><span>+200</span><br>Publications</div>
+ 
+  
+  <!-- <section class="second-section">
+    <div class="header2">
+      <div class="container">
+        <div class="doctor">
+          <img src="images/professor_desimone-1.png" alt="Doctor">
         </div>
-        <div class="button">
-          <a href="#">View Products</a>
+        <div class="info">
+          <h1>Science Speaks <span>For</span> <span class="highlight">Itself</span></h1>
+          <p>The De Simone Formulation contained in CDS22-formula is the only probiotic formulation recommended and
+            recognized by name in the American College of Gastroenterology AGA guidelines for the management of
+            pouchitis
+            and other pouch-related disorders (Olleik et al., Gastroenterology, Vol. 164, No. 6, 2023).</p>
+          <p>The European Crohn’s and Colitis Organization (ECCO) has included the De Simone Formulation in its
+            guidelines
+            for the management of Inflammatory Bowel Diseases (IBD) (ECCO, ECCO News, 2023). CDS22-formula is highly
+            effective in the dietary management of various gastrointestinal conditions. The extensive scientific
+            evidence,
+            comprising over 200 peer-reviewed articles and more than 80 controlled clinical studies, ensures that the
+            benefits observed in clinical trials are replicable in everyday use.</p>
+          <div class="stats">
+            <div class="stat-box"><span>20+</span><br>Years of Research</div>
+            <div class="stat-box"><span>8</span><br>Selected Strains</div>
+            <div class="stat-box"><span>90</span><br>Up to 90 Billion Per Sachet</div>
+            <div class="stat-box"><span>+200</span><br>Publications</div>
+          </div>
+          <div class="button">
+            <a href="#">View Products</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section> -->
+  </section>  -->
 
 
-<!-- 3rd section -->
-   <section class="worker-section"> 
+  <!-- 3rd section -->
+  <section class="worker-section">
     <div class="worker-content">
       <h1 class="worker-title">Why Does It <span class="work">Work?</span></h1>
       <p class="worker-description">
@@ -150,32 +105,42 @@
         within the field of biology, not chemistry, as the bacteria forming the product s
         base are living organisms. Their cultivation requires advanced scientific
         knowledge and specific know-how, still protected by industrial secrecy.
-        </p>
+      </p>
     </div>
     <div class="hero-image">
       <img src="Images/Cycle.png" alt="Hero Section Image">
     </div>
-  </section> 
+  </section>
 
   <!-- 4rth section -->
   <section class="formulation-section">
     <div class="formulation-conetent">
-      <h1 class="formulation-title">De<span style="color:#ff3399"> Simone </span><span style="color: #0096FF;">Formulation</span></h1>
+      <h1 class="formulation-title">De<span style="color:#ff3399"> Simone </span><span
+          style="color: #0096FF;">Formulation</span></h1>
       <p class="formulation-description">
-        The De Simone Formulation contained in CDS22-formula is the result of pioneering research by Professor Claudio De Simone (MD, FAGA), who redefined 
-        therapeutic approaches to intestinal health by introducing the use of high-concentration probiotic mixtures to dietetically manage acute and chronic 
+        The De Simone Formulation contained in CDS22-formula is the result of pioneering research by Professor Claudio
+        De Simone (MD, FAGA), who redefined
+        therapeutic approaches to intestinal health by introducing the use of high-concentration probiotic mixtures to
+        dietetically manage acute and chronic
         gastrointestinal disorders.
       </p>
-      <p> His interest in the intestinal microbiota dates back to the 1980s when the importance of the intestinal flora’s role was just beginning to be 
-        understood. Professor De Simone is an honorary member of the American College of Gastroenterology and, after graduating in Medicine and 
-        Surgery, specialized in gastroenterology, allergology, and clinical immunology. He taught Infectious Diseases at the University of L’Aquila (Italy).</p><br>
+      <p> His interest in the intestinal microbiota dates back to the 1980s when the importance of the intestinal
+        flora’s role was just beginning to be
+        understood. Professor De Simone is an honorary member of the American College of Gastroenterology and, after
+        graduating in Medicine and
+        Surgery, specialized in gastroenterology, allergology, and clinical immunology. He taught Infectious Diseases at
+        the University of L’Aquila (Italy).</p><br>
       <p> He has published over 200 clinical studies, scientific articles, and book chapters.</p><br>
-      <p>Since the commercial launch of his renowned De Simone Formulation in the 1990s, the Professor has actively advocated for better regulation and quality 
+      <p>Since the commercial launch of his renowned De Simone Formulation in the 1990s, the Professor has actively
+        advocated for better regulation and quality
         control of probiotics, highlighting the potential health and well-being risks</p><br>
-      <p>As emphasized by Professor De Simone in numerous conferences and publications, many marketed probiotics have not been clinically tested or may not 
-        correspond to the original clinically tested formulations when marketed, causing substantial differences in the safety and efficacy of the final product (De 
+      <p>As emphasized by Professor De Simone in numerous conferences and publications, many marketed probiotics have
+        not been clinically tested or may not
+        correspond to the original clinically tested formulations when marketed, causing substantial differences in the
+        safety and efficacy of the final product (De
         Simone C. Clinical Gastroenterology and Hepatology Vol. 16 No. 9 2018).</p><br>
-      <p>Current regulations often do not require thorough comparative studies to ensure that changes in manufacturing processes do not compromise the efficacy and 
+      <p>Current regulations often do not require thorough comparative studies to ensure that changes in manufacturing
+        processes do not compromise the efficacy and
         safety of the commercially distributed probiotic product.</p>
   </section>
 
@@ -186,105 +151,160 @@
       <h1 class="de-simone-title">There is ONE </br>
         De <span class="work">Simone</span> <span class="line">Formulation</span> </h1>
       <p class="de-simone-description">
-        The lack of strict regulation and the possibility for manufacturers to modify formulations without adequately informing consumers pose a threat to public trust. 
-        In the past, the De Simone Formulation (DSF) was sold under the brand name VSL#3®*, by VSL Pharmaceuticals and Actial Srl.</p>
-        <p>
-         In 2019, VSL#3® distributors were found guilty of false advertising (for more information:Federal Judge Upholds $18M Verdict, Blocks False Advertising of 
-        VSL#3, Schulman Bhattacharya). Recently, the European Crohn’s and Colitis Organisation (ECCO) has updated its guidelines to clarify that pre-2016 literature 
-        references to VSL#3® exclusively refer to DSF (ECCO, ECCO News, 2023). In 2024, ESPEN (European Society for Clinical Nutrition and Metabolism) published 
-        the article “Clarifying Correct Attributions in Scientific Literature: The Case of the De Simone Formulation and VSL#3®“, which reiterates the above.</p><br>
-        <p>
-         The De Simone Formulation is sold under the brand name “Visbiome” in the USA and Canada (Exegi) and under the brand name “De Simone Formulation” in 
+        The lack of strict regulation and the possibility for manufacturers to modify formulations without adequately
+        informing consumers pose a threat to public trust.
+        In the past, the De Simone Formulation (DSF) was sold under the brand name VSL#3®*, by VSL Pharmaceuticals and
+        Actial Srl.</p>
+      <p>
+        In 2019, VSL#3® distributors were found guilty of false advertising (for more information:Federal Judge Upholds
+        $18M Verdict, Blocks False Advertising of
+        VSL#3, Schulman Bhattacharya). Recently, the European Crohn’s and Colitis Organisation (ECCO) has updated its
+        guidelines to clarify that pre-2016 literature
+        references to VSL#3® exclusively refer to DSF (ECCO, ECCO News, 2023). In 2024, ESPEN (European Society for
+        Clinical Nutrition and Metabolism) published
+        the article “Clarifying Correct Attributions in Scientific Literature: The Case of the De Simone Formulation and
+        VSL#3®“, which reiterates the above.</p><br>
+      <p>
+        The De Simone Formulation is sold under the brand name “Visbiome” in the USA and Canada (Exegi) and under the
+        brand name “De Simone Formulation” in
         Korea (HectoHealthcare).<br>
-         Soon to be available in the EU under the brand CDS22-formula.</p>
-         <p class="text">
-         *is a registered trademark of VSL Pharmaceuticals and Actial Srl Inc, independent companies from EOS2021 S.r.l.
+        Soon to be available in the EU under the brand CDS22-formula.</p>
+      <p class="text">
+        *is a registered trademark of VSL Pharmaceuticals and Actial Srl Inc, independent companies from EOS2021 S.r.l.
       </p>
   </section>
 
 
   <!-- FAQ Section -->
-   <div class="container"> 
+  <div class="container2">
 
     <h2 class="Faq-titles">FAQ</h2>
-  
+
     <div class="faq-items">
       <div class="faq-question">What does CDS22-formula contain?</div>
     </div>
-  
+
     <div class="faq-items">
       <div class="faq-question">Where can I find CDS22-formula?</div>
     </div>
-  
+
     <div class="faq-items">
       <div class="faq-question">Why should I take CDS22-formula?</div>
     </div>
-  
+
     <div class="faq-items">
       <div class="faq-question">How do I take CDS22-formula?</div>
     </div>
-  
+
     <div class="faq-items">
       <div class="faq-question">Does CDS22-formula contain allergens?</div>
     </div>
-  
+
     <div class="faq-items">
       <div class="faq-question">Why must CDS22-formula be stored in the refrigerator?</div>
     </div>
-  
+
     <div class="faq-items">
       <div class="faq-question">Can CDS22-formula have side effects?</div>
     </div>
-  
+
     <div class="faq-items">
       <div class="faq-question">Can CDS22-formula be taken during antibiotic therapy?</div>
     </div>
-  
+
     <div class="faq-items">
       <div class="faq-question">Can CDS22-formula be taken during pregnancy?</div>
     </div>
-  
-  </div> 
+
+  </div>
 
   <!-- contact section -->
-   <div style="background-color: #0096FF; height: 200px; border-top-left-radius: 50px;border-top-right-radius: 50px;position: relative;">
-    <div class="contact">
-    <div class="form">
-      
-      <form id="contactForm">
-        <div class="radio">
-        <label>
-          <input type="radio" name="contact" value="hi" checked> Say Hi
-        </label>
-        <label>
-          <input type="radio" name="contact" value="quote"> Get a Quote
-        </label>
+  <div>
+    <!-- <div
+      style="background-color: #0096FF; height: 200px; border-top-left-radius: 50px;border-top-right-radius: 50px;position: relative;
+      margin-bottom: 50px;"> -->
+
+      <div class="contact">
+        <div class="form">
+
+          <form id="contactForm">
+            <div class="radio">
+              <label>
+                <input type="radio" name="contact" value="hi" checked> Say Hi
+              </label>
+              <label>
+                <input type="radio" name="contact" value="quote"> Get a Quote
+              </label>
+            </div>
+            <div class="form-class">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Name" required>
+            </div>
+            <div class="form-class">
+              <label for="email">Email*</label>
+              <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-class">
+              <label for="message">Message*</label>
+              <textarea id="message" name="message" placeholder="Message" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+          <div>
+            <div class="hero-image">
+              <div class="contact-heading">
+                <h1>CDS22<span>-formula</span></h1>
+              </div>
+              <img src="Images/image1.png" alt="Hero Section Image">
+            </div>
+          </div>
+        </div>
       </div>
-        <div class="form-class">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Name" required>
-        </div>
-        <div class="form-class">
-          <label for="email">Email*</label>
-          <input type="email" id="email" name="email" placeholder="Email" required>
-        </div>
-        <div class="form-class">
-          <label for="message">Message*</label>
-          <textarea id="message" name="message" placeholder="Message" required></textarea>
-        </div>
-        
-        <button type="submit" class="submit-btn">Send Message</button>
-      </form>
-      <div>
-       <div class="hero-image">
-        <div class="contact-heading">
-          <h1>CDS22<span>-formula</span></h1>
-        </div>
-      <img src="Images/image 1.png" alt="Hero Section Image">
     </div>
-      </div>
-    </div>
-  </div>
-  </div> 
+
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+  import {getDatabase,ref,push} from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyBFzVYXSBbptdcnW9AraK8hGSv137Db4Oo",
+    authDomain: "hackathon-2601a.firebaseapp.com",
+    databaseURL: "https://hackathon-2601a-default-rtdb.firebaseio.com",
+    projectId: "hackathon-2601a",
+    storageBucket: "hackathon-2601a.firebasestorage.app",
+    messagingSenderId: "191726848859",
+    appId: "1:191726848859:web:f67171571f67fa3aa3687e"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+  const contactForm = document.getElementById("contactForm");
+  contactForm.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    push(ref(database, 'contacts'),{
+      name: name,
+      email: email,
+      message: message,
+    }).then(()=>{
+      alert('Message Successfully submit!');
+      contactForm.reset()
+    }).catch((error)=>{
+      console.error('you have ',error)
+    })
+
+  });
+
+</script>
+
 </body>
-</html> 
+
+</html>
